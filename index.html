@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <title>Alfo.ga Frontend</title>
+</head>
+<body>
+    <div class="bg-box"></div>
+    <header>
+        <a href="/" class="logo">
+            <img src="./logo.png" alt="ALFO.GA">
+        </a>
+        <nav>
+            <a href="#" class="nav-link">about</a>
+            <a href="#" class="nav-link">sign in</a>
+            <a href="#" class="nav-link">sign up</a>
+        </nav>
+    </header>
+    <main>
+        <section class="shortner">
+            <form id="long" method="POST">
+                <div class="tb">
+                    <input type="url" class="form-contol" placeholder="Enter a URL to shorten here">
+                    <button type="submit" class="btn-tb">
+                        <i class="bi bi-arrow-right-short"></i>
+                        <!-- {{ if generated }} -->
+                        <i class="bi bi-check hidden"></i>
+                        <!-- {{ endif }} -->
+                    </button>
+                </div>
+            </form>
+            <form id="short" method="POST">
+                <h2>Here's your shortened URL</h2>
+                <div class="tb">
+                    <input type="url" class="form-contol" placeholder="alfo.ga/short_url">
+                    <button type="submit" class="btn-tb">
+                        <i class="bi bi-clipboard-plus"></i>
+                        <!-- {{ if generated }} -->
+                        <i class="bi bi-check hidden"></i>
+                        <!-- {{ endif }} -->
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="description">
+            <h1 class="script">Shorten your <br />URls for <br/>free</h1>
+            <article class="supporting-text">Fully customisable, free forever, easy tracking. What else could you ask for?</article>
+        </section>
+    </main>
+</body>
+</html>

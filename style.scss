@@ -1,0 +1,148 @@
+$yellow: #FBFF03;
+$grey: #7B7B7B;
+$orange: #FFCF06;
+$alternatives: Arial, Helvetica, sans-serif;
+
+@font-face{
+    font-family: 'Hansief';
+    src: url('./Hansief.woff') format(woff);
+}
+
+@font-face{
+    font-family: 'script';
+    src: url('./script.ttf');
+}
+
+body, html{
+    font-family: $alternatives;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    
+    .bg-box{
+        z-index: -999;
+        overflow: hidden;
+        position: fixed;
+
+        width: calc(100% + 500px);
+        height: calc(100% + 500px);
+        left: -10%;
+        &{
+            transform: rotate(-45deg);
+            background:
+                radial-gradient(circle at 1px 6px, green 14px, red 13px) left 0 top -10px/20px 20px repeat-x,
+                radial-gradient(circle at 10px 15px, blue 12px, purple 13px) left 0 top -5px/40px 20px repeat-x,
+                #FBFF03
+        }
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    // Navigation
+
+    header{
+        padding: 15px 2vw;
+        nav{
+            img{
+                height: 3em;
+            }
+            float: right;
+            .nav-link{
+                display: inline-block;
+                font-size: 1.2rem;
+                padding: 10px;
+                text-transform: uppercase;
+                font-family: Hansief, $alternatives !important;
+                border-radius: 10px;
+                &:hover{
+                    background: rgba($color: white, $alpha: 0.5);
+                }
+            }
+        }
+    }
+
+    // Main
+
+    main{
+        margin-top: 30px;
+        .shortner{
+            vertical-align: middle;
+            display: inline-block;
+            width: 35vw;
+            padding: 1.5vw;
+        }
+        .description{
+            float: right;
+            width: 50%;
+            .script{
+                font-family: script, $alternatives;
+                font-size: 5em;
+            }
+            .supporting-text{
+                color: white;
+                font-weight: bold;
+                margin-top: -30px;
+                width: 200px;
+                text-shadow: 0px 0px 3px $grey;
+            }
+        }
+        .tb{
+            transition: 0.4s ease-in-out;
+            box-sizing: border-box;
+            width: 100%;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0px 5px 15px $grey;
+            height: 50px;
+            align-items: center;
+            overflow: hidden;
+            input{
+                border: none;
+                outline: none;
+                margin: 10px 0px 10px 1.5vw;
+                font-size: 1.2rem;
+                padding: 2px;
+                width: calc(100% - 90px);
+            }
+            button{
+                cursor: pointer;
+                border: none;
+                box-sizing: border-box;
+                float: right;
+                background: black;
+                color: white;
+                height: 100%;
+                width: 50px;
+                &:focus, &:hover{
+                    scale: 1.01;
+                }
+            }
+            &:hover, &:focus{
+                scale: 1.01;
+                box-shadow: 0 8px 15px $grey;
+            }
+        }
+        #short{
+            display: none;
+        }
+        
+    }
+
+
+    // Utilities
+    a{
+        color: inherit;
+    }
+    .bi{
+        font-size: 1.7rem;
+        &.hidden{
+            display: none;
+        }
+    }
+
+}

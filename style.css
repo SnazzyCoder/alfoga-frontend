@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'Hansief';
+  src: url("./Hansief.woff") format(woff);
+}
+
+@font-face {
+  font-family: 'script';
+  src: url("./script.ttf");
+}
+
+body, html {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body .bg-box, html .bg-box {
+  z-index: -999;
+  overflow: hidden;
+  position: fixed;
+  width: calc(100% + 500px);
+  height: calc(100% + 500px);
+  left: -10%;
+}
+
+body .bg-box, html .bg-box {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background: radial-gradient(circle at 1px 6px, green 14px, red 13px) left 0 top -10px/20px 20px repeat-x, radial-gradient(circle at 10px 15px, blue 12px, purple 13px) left 0 top -5px/40px 20px repeat-x, #FBFF03;
+}
+
+body *, html * {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body header, html header {
+  padding: 15px 2vw;
+}
+
+body header nav, html header nav {
+  float: right;
+}
+
+body header nav img, html header nav img {
+  height: 3em;
+}
+
+body header nav .nav-link, html header nav .nav-link {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: Hansief, Arial, Helvetica, sans-serif !important;
+  border-radius: 10px;
+}
+
+body header nav .nav-link:hover, html header nav .nav-link:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+body main, html main {
+  margin-top: 30px;
+}
+
+body main .shortner, html main .shortner {
+  vertical-align: middle;
+  display: inline-block;
+  width: 35vw;
+  padding: 1.5vw;
+}
+
+body main .description, html main .description {
+  float: right;
+  width: 50%;
+}
+
+body main .description .script, html main .description .script {
+  font-family: script, Arial, Helvetica, sans-serif;
+  font-size: 5em;
+}
+
+body main .description .supporting-text, html main .description .supporting-text {
+  color: white;
+  font-weight: bold;
+  margin-top: -30px;
+  width: 200px;
+  text-shadow: 0px 0px 3px #7B7B7B;
+}
+
+body main .tb, html main .tb {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  border-radius: 15px;
+  background: white;
+  -webkit-box-shadow: 0px 5px 15px #7B7B7B;
+          box-shadow: 0px 5px 15px #7B7B7B;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+body main .tb input, html main .tb input {
+  border: none;
+  outline: none;
+  margin: 10px 0px 10px 1.5vw;
+  font-size: 1.2rem;
+  padding: 2px;
+  width: calc(100% - 90px);
+}
+
+body main .tb button, html main .tb button {
+  cursor: pointer;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: right;
+  background: black;
+  color: white;
+  height: 100%;
+  width: 50px;
+}
+
+body main .tb button:focus, body main .tb button:hover, html main .tb button:focus, html main .tb button:hover {
+  scale: 1.01;
+}
+
+body main .tb:hover, body main .tb:focus, html main .tb:hover, html main .tb:focus {
+  scale: 1.01;
+  -webkit-box-shadow: 0 8px 15px #7B7B7B;
+          box-shadow: 0 8px 15px #7B7B7B;
+}
+
+body main #short, html main #short {
+  display: none;
+}
+
+body a, html a {
+  color: inherit;
+}
+
+body .bi, html .bi {
+  font-size: 1.7rem;
+}
+
+body .bi.hidden, html .bi.hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
